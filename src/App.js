@@ -68,16 +68,20 @@ function App() {
           title={title}
           year={year}
           director={director}
-          posterColor={posterColor}/>
+          posterColor={posterColor}
+          deleteMovie={deleteMovie}
+        />
       </div>
 
       <div className="movie-list">
-        <MovieList 
-          movies={filteredMovies.length ? filteredMovies : allMovies}
-          
-          deleteMovie={deleteMovie}/>
+        Filter movies
+        <input onChange={(e) => filterMovies(e.target.value)} />
       </div>
+      <MovieList 
+        movies={filteredMovies.length ? filteredMovies : allMovies}
+        deleteMovie={deleteMovie}/>
     </div>
+  
   );
 }
 

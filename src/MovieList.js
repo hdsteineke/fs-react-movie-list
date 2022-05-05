@@ -7,8 +7,13 @@ export default function MovieList(props) {
         MovieList
       {props.movies.map((movie, i) =>
         <Movie key={`${movie.title}-${movie.director}-${i}`}
-          movie={movie}
-          deleteMovie={props.deleteMovie}
+        
+          title={movie.title}
+          year={movie.year}
+          director={movie.director}
+          posterColor={movie.posterColor}
+          deleteMovie={movie.deleteMovie}
+      
         />
       )}
     </div>
