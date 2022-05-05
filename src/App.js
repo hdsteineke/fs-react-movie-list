@@ -5,7 +5,7 @@ import MovieForm from './MovieForm';
 import MovieList from './MovieList';
 
 function App() {
-  const [allMovies, setAllMovies] = useState(['']);
+  const [allMovies, setAllMovies] = useState([{ title: 'Jawbreaker', year: '1442', director: 'Shelley', posterColor: 'lavender' }]);
   const [filteredMovies, setFilteredMovies] = useState([]);
   const [title, setTitle] = useState('');
   const [year, setYear] = useState('');
@@ -39,9 +39,9 @@ function App() {
     setAllMovies([...allMovies]);
   }
 
-  function filterMovies(input) {
-    if (input) {
-      const matchingMovies = allMovies.filter(movie => movie.name.toLowerCase().includes(input.toLowerCase())
+  function filterMovies(search) {
+    if (search) {
+      const matchingMovies = allMovies.filter(movie => movie.title.toLowerCase().includes(search.toLowerCase())
       );
       setFilteredMovies([...matchingMovies]);
     } else {
