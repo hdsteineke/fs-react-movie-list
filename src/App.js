@@ -70,6 +70,13 @@ function App() {
           director={director}
           posterColor={posterColor}/>
       </div>
+
+      <div className="movie-list">
+        <MovieList 
+          movies={filteredMovies.length ? filteredMovies : allMovies}
+          
+          deleteMovie={deleteMovie}/>
+      </div>
     </div>
   );
 }

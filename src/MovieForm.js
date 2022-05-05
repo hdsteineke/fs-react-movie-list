@@ -2,7 +2,8 @@ import React from 'react';
 
 export default function MovieForm(props) {
   return (
-    <div className="movie-form">Tell us your favorite movies!
+    <div className="movie-form">
+      <h2>Tell us your favorite movies!</h2>
       <form onSubmit={props.submitMovie}>
         <label>Title:
           <input required value={props.title} onChange={((e) => 
