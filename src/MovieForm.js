@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function MovieForm(props) {
   return (
-    <div className="movie-form">MovieForm
+    <div className="movie-form">Tell us your favorite movies!
       <form onSubmit={props.submitMovie}>
         <label>Title:
           <input required value={props.title} onChange={((e) => 
@@ -27,13 +27,14 @@ export default function MovieForm(props) {
           <select required value={props.posterColor} onChange={((e) => 
             props.setPosterColor(e.target.value))}>
   
-            <option value='yellow'>Yellow</option>
+            <option value='gold'>Yellow</option>
             <option value='orange'>Orange</option>
             <option value='pink'>Pink</option>
-            <option value="blue">Blue</option>
-            <option value="purple">Purple</option>
+            <option value="lightblue">Blue</option>
+            <option value="lavender">Purple</option>
           </select>
         </label>
+        <button>Add Movie</button>
       </form>
     </div>
   );

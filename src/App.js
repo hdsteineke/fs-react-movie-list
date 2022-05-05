@@ -7,10 +7,10 @@ import MovieList from './MovieList';
 function App() {
   const [allMovies, setAllMovies] = useState(['']);
   const [filteredMovies, setFilteredMovies] = useState([]);
-  const [title, setTitle] = useState('Hello World');
-  const [year, setYear] = useState('1983');
-  const [director, setDirector] = useState('Movie Shmu');
-  const [posterColor, setPosterColor] = useState('orange');
+  const [title, setTitle] = useState('');
+  const [year, setYear] = useState('');
+  const [director, setDirector] = useState('');
+  const [posterColor, setPosterColor] = useState('');
 
 
   function submitMovie(e) {
@@ -64,7 +64,11 @@ function App() {
           submitMovie={submitMovie}
           allMovies={allMovies}
         /> 
-        <Movie />
+        <Movie 
+          title={title}
+          year={year}
+          director={director}
+          posterColor={posterColor}/>
       </div>
     </div>
   );
