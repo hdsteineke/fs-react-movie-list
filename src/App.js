@@ -69,7 +69,6 @@ function App() {
           year={year}
           director={director}
           posterColor={posterColor}
-          deleteMovie={deleteMovie}
         />
       </div>
 
@@ -79,7 +78,8 @@ function App() {
       </div>
       <MovieList 
         movies={filteredMovies.length ? filteredMovies : allMovies}
-        deleteMovie={deleteMovie}/>
+        deleteMovie={deleteMovie}
+      />
     </div>
   
   );

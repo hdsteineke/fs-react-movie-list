@@ -12,7 +12,7 @@ export default function MovieList(props) {
           year={movie.year}
           director={movie.director}
           posterColor={movie.posterColor}
-          deleteMovie={movie.deleteMovie}
+          deleteMovie={props.deleteMovie}
       
         />
       )}
