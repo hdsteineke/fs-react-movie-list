@@ -5,7 +5,33 @@ import MovieForm from './MovieForm';
 import MovieList from './MovieList';
 
 function App() {
-  const [allMovies, setAllMovies] = useState([{ title: 'Jawbreaker', year: '1442', director: 'Shelley', posterColor: 'lavender' }]);
+  const [allMovies, setAllMovies] = useState([
+    { 
+      title: 'Jawbreaker', 
+      year: '1442', 
+      director: 'Shelley', 
+      posterColor: 'lavender' 
+    }, 
+    {
+      title: 'Jaws', 
+      year: '1980', 
+      director: 'Shwoop', 
+      posterColor: 'lightblue'
+    },
+    {
+      title: 'Wizard of Oz', 
+      year: '1432', 
+      director: 'Diddly', 
+      posterColor: 'pink'
+    },
+    {
+      title: 'Gone with the Wind', 
+      year: '2000', 
+      director: 'Dunn', 
+      posterColor: 'orange'
+    }]
+  );
+
   const [filteredMovies, setFilteredMovies] = useState([]);
   const [title, setTitle] = useState('');
   const [year, setYear] = useState('');
